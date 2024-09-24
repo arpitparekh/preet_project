@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <header>
+
+      <div class="navbar">
+
+        <div class="logo">
+          <a href=""><img src="/images/logo.jpeg" alt="logo"/></a>
+        </div>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+    <div class="img-slider">
+      <div class="slider">
+        <div class="slides">
+          <img src="images/store01.jpeg" height="200px" width="200px">
+          <img src="images/store02.jpeg" height="200px" width="200px">
+          <img src="images/store03.jpeg" height="200px" width="200px">
+          <img src="images/store01.jpeg" height="200px" width="200px">
+          <img src="images/store02.jpeg" height="200px" width="200px">
+          <img src="images/store03.jpeg" height="200px" width="200px">
+          <img src="images/store01.jpeg" height="200px" width="200px">
+          <img src="images/store02.jpeg" height="200px" width="200px">
+          <img src="images/store02.jpeg" height="200px" width="200px">
+          <img src="images/store02.jpeg" height="200px" width="200px">
+          <img src="images/store03.jpeg" height="200px" width="200px" id="last">
+
+
+        </div>
+        </div>
+      </div>
+      <button class="prev">&#x2190;</button>
+      <button class="next">&#x2192;</button>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        const slideWidth = 210; // 200px image width + 10px gap
+        let currentPosition = 0;
+
+        prevBtn.addEventListener('click', () => {
+            if (currentPosition < 0) {
+                currentPosition += slideWidth;
+                slider.style.transform = `translateX(${currentPosition}px)`;
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const maxScroll = -(slider.scrollWidth - slider.clientWidth);
+            if (currentPosition > maxScroll) {
+                currentPosition -= slideWidth;
+                slider.style.transform = `translateX(${currentPosition}px)`;
+            }
+        });
+    </script>
+
+  </body>
+
+
+
+</html>
