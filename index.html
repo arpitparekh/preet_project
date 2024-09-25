@@ -8,13 +8,10 @@
   </head>
   <body>
     <header>
-
       <div class="navbar">
-
         <div class="logo">
-          <a href=""><img src="/images/logo.jpeg" alt="logo"/></a>
+          <a href=""><img src="/images/logo.jpeg" alt="logo" /></a>
         </div>
-
         <nav>
           <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -23,58 +20,95 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
-
       </div>
     </header>
 
     <div class="img-slider">
       <div class="slider">
         <div class="slides">
-          <img src="images/store01.jpeg" height="200px" width="200px">
-          <img src="images/store02.jpeg" height="200px" width="200px">
-          <img src="images/store03.jpeg" height="200px" width="200px">
-          <img src="images/store01.jpeg" height="200px" width="200px">
-          <img src="images/store02.jpeg" height="200px" width="200px">
-          <img src="images/store03.jpeg" height="200px" width="200px">
-          <img src="images/store01.jpeg" height="200px" width="200px">
-          <img src="images/store02.jpeg" height="200px" width="200px">
-          <img src="images/store02.jpeg" height="200px" width="200px">
-          <img src="images/store02.jpeg" height="200px" width="200px">
-          <img src="images/store03.jpeg" height="200px" width="200px" id="last">
-
-
-        </div>
+          <img src="images/store01.jpeg" alt="Store 1" />
+          <img src="images/store02.jpeg" alt="Store 2" />
+          <img src="images/store03.jpeg" alt="Store 3" />
+          <img src="images/store01.jpeg" alt="Store 1" />
+          <img src="images/store02.jpeg" alt="Store 2" />
+          <img src="images/store03.jpeg" alt="Store 3" />
+          <img src="images/store01.jpeg" alt="Store 1" />
+          <img src="images/store02.jpeg" alt="Store 2" />
+          <img src="images/store02.jpeg" alt="Store 2" />
+          <img src="images/store02.jpeg" alt="Store 2" />
+          <img src="images/store03.jpeg" alt="Store 3" id="last" />
         </div>
       </div>
       <button class="prev">&#x2190;</button>
       <button class="next">&#x2192;</button>
     </div>
 
+    <div class="container">
+      <div class="box">
+        <img src="images/cadbury_dairy_milk.jpeg" alt="Cadbury Dairy Milk Silk" />
+        <h1>Cadbury Dairy Milk Silk</h1>
+        <p>
+          There is nothing bad present in Cadbury Dairy Milk Silk that you can't consume occasionally. In fact, it is free from any harmful preservatives, which is a great plus point. The problem is the high sugar content and high saturated fat content.
+        </p>
+      </div>
+      <div class="box">
+        <img src="images/kitkat_chocolate.jpeg" alt="Kit Kat Chocolate" />
+        <h1>Kit Kat Chocolate</h1>
+        <p>
+          The Kit Kat Orange was the first flavour variant to be introduced in the United Kingdom, in 1996 and 1998 in Ireland. It was followed in 1997 by the Kit Kat Dark and Kit Kat Mint.
+        </p>
+      </div>
+      <div class="box">
+        <img src="images/five_star_chocolate.jpeg" alt="Five Star Chocolate" />
+        <h1>Five Star Chocolate</h1>
+        <p>
+          Cadbury Five Star Chocolate is a delicious and creamy chocolate bar made by Cadbury. It is a combination of crunchy biscuit, caramel, and chocolate.
+        </p>
+      </div>
+      <div class="box">
+        <img src="images/dark_chocolate.jpeg" alt="DARK Chocolate" />
+        <h1>DARK Chocolate</h1>
+        <p>
+          Cocoa beans were once powdered and mixed with honey, spices, chili peppers, vanilla, and water to prepare a frothy drink savored by the civilizations in Central America.
+        </p>
+      </div>
+      <div class="box">
+        <img src="images/white_chocolate.jpeg" alt="White Chocolate" />
+        <h1>White Chocolate</h1>
+        <p>
+          White chocolate is a sweet and creamy delight that often divides chocolate lovers. While some argue that it is not “real” chocolate due to its lack of cocoa solids, others find its smooth texture irresistible.
+        </p>
+      </div>
+      <div class="box">
+        <img src="images/biscuit.jpeg" alt="Biscuit" />
+        <h1>Biscuit</h1>
+        <p>
+          Biscuit slogans are short and catchy phrases used to attract customers. They highlight the delicious taste, quality ingredients, and the comfort of enjoying biscuits.
+        </p>
+      </div>
+    </div>
+
     <script>
-        const slider = document.querySelector('.slider');
-        const prevBtn = document.querySelector('.prev');
-        const nextBtn = document.querySelector('.next');
-        const slideWidth = 210; // 200px image width + 10px gap
-        let currentPosition = 0;
+      const slider = document.querySelector('.slider');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+      const slideWidth = 210; // 200px image width + 10px gap
+      let currentPosition = 0;
 
-        prevBtn.addEventListener('click', () => {
-            if (currentPosition < 0) {
-                currentPosition += slideWidth;
-                slider.style.transform = `translateX(${currentPosition}px)`;
-            }
-        });
+      prevBtn.addEventListener('click', () => {
+        if (currentPosition < 0) {
+          currentPosition += slideWidth;
+          slider.style.transform = `translateX(${currentPosition}px)`;
+        }
+      });
 
-        nextBtn.addEventListener('click', () => {
-            const maxScroll = -(slider.scrollWidth - slider.clientWidth);
-            if (currentPosition > maxScroll) {
-                currentPosition -= slideWidth;
-                slider.style.transform = `translateX(${currentPosition}px)`;
-            }
-        });
+      nextBtn.addEventListener('click', () => {
+        const maxScroll = -(slider.scrollWidth - slider.clientWidth);
+        if (currentPosition > maxScroll) {
+          currentPosition -= slideWidth;
+          slider.style.transform = `translateX(${currentPosition}px)`;
+        }
+      });
     </script>
-
   </body>
-
-
-
 </html>
